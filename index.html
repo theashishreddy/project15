@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>15 August — In Memory of Those Who Won Us the Dawn</title>
+<meta name="description" content="A tribute to India's freedom fighters and the timeline of the independence movement.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Mukta:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --midnight:#0a1128;
+    --night:#111a3d;
+    --night-2:#152050;
+    --marigold:#e8a33d;
+    --marigold-dim:#c9832a;
+    --maroon:#7a1f2b;
+    --khadi:#f1ead9;
+    --khadi-dim:#c9c2ad;
+    --chakra:#3a5fb8;
+    --thread-saffron:#e8a33d;
+    --thread-white:#f1ead9;
+    --thread-green:#1e5b3a;
+    --max:1180px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--midnight);
+    color:var(--khadi);
+    font-family:'Mukta',sans-serif;
+    font-weight:400;
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+  }
+  h1,h2,h3{font-family:'Yatra One',cursive;font-weight:400;letter-spacing:0.02em;color:var(--khadi);}
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--marigold);
+  }
+  a{color:inherit;}
+  .thread{
+    height:3px;
+    width:100%;
+    background:linear-gradient(90deg,
+      var(--thread-saffron) 0%, var(--thread-saffron) 33%,
+      var(--thread-white) 33%, var(--thread-white) 66%,
+      var(--thread-green) 66%, var(--thread-green) 100%);
+    opacity:0.85;
+  }
+
+  /* NAV */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:1.1rem clamp(1.25rem,4vw,3.5rem);
+    background:rgba(10,17,40,0.82);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(241,234,217,0.08);
+  }
+  .brand{display:flex;align-items:center;gap:0.6rem;font-family:'Yatra One',cursive;font-size:1.25rem;}
+  .brand svg{width:26px;height:26px;flex-shrink:0;}
+  nav ul{display:flex;gap:clamp(1rem,2.5vw,2.2rem);list-style:none;}
+  nav ul li a{
+    font-size:0.85rem;text-decoration:none;color:var(--khadi-dim);
+    letter-spacing:0.03em;transition:color 0.25s ease;
+  }
+  nav ul li a:hover{color:var(--marigold);}
+  @media (max-width:640px){ nav ul{gap:0.9rem;} nav ul li a{font-size:0.72rem;} }
+
+  /* HERO */
+  .hero{
+    min-height:100vh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;
+    padding:7rem 1.5rem 4rem;
+    position:relative;
+    background:
+      radial-gradient(ellipse at 50% 15%, rgba(58,95,184,0.16), transparent 55%),
+      var(--midnight);
+  }
+  .chakra-wrap{
+    width:min(230px,52vw);height:min(230px,52vw);
+    margin-bottom:1.8rem;
+    opacity:0.92;
+  }
+  .chakra-wrap svg{width:100%;height:100%;animation:spin 60s linear infinite;}
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  .hero h1{
+    font-size:clamp(2.6rem,7vw,5rem);
+    line-height:1.05;
+    margin-bottom:1rem;
+  }
+  .hero h1 span{color:var(--marigold);}
+  .hero p.lede{
+    max-width:640px;
+    color:var(--khadi-dim);
+    font-size:clamp(1rem,1.6vw,1.2rem);
+    margin-bottom:2.2rem;
+  }
+  .hero .date-badge{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.85rem;
+    letter-spacing:0.15em;
+    color:var(--marigold);
+    border:1px solid rgba(232,163,61,0.4);
+    padding:0.55rem 1.3rem;
+    border-radius:2px;
+    text-transform:uppercase;
+  }
+  .hero-thread{position:absolute;bottom:0;left:0;right:0;}
+
+  /* SECTION SHELL */
+  section{padding:5.5rem clamp(1.25rem,5vw,4rem);}
+  .section-inner{max-width:var(--max);margin:0 auto;}
+  .section-head{
+    display:flex;flex-direction:column;gap:0.6rem;
+    margin-bottom:3rem;
+    max-width:680px;
+  }
+  .section-head h2{font-size:clamp(1.9rem,3.6vw,2.7rem);}
+  .section-head p{color:var(--khadi-dim);font-size:1rem;}
+
+  /* MIDNIGHT SPEECH */
+  .speech{
+    background:var(--night);
+    border-left:3px solid var(--marigold);
+    padding:2.2rem clamp(1.5rem,4vw,3rem);
+    max-width:800px;
+    margin:0 auto;
+    border-radius:0 6px 6px 0;
+  }
+  .speech .eyebrow{margin-bottom:0.8rem;}
+  .speech p{font-size:clamp(1.05rem,2vw,1.35rem);font-family:'Yatra One',cursive;color:var(--khadi);line-height:1.55;}
+  .speech footer{margin-top:1.2rem;font-size:0.85rem;color:var(--khadi-dim);font-family:'JetBrains Mono',monospace;}
+
+  /* TIMELINE */
+  .timeline{position:relative;max-width:820px;margin:0 auto;}
+  .timeline-spine{
+    position:absolute;left:28px;top:0;bottom:0;width:2px;
+    background:linear-gradient(var(--marigold-dim), rgba(232,163,61,0.15));
+  }
+  @media (min-width:781px){ .timeline-spine{ left:50%; margin-left:-1px; } }
+  .t-item{
+    position:relative;
+    display:flex;
+    gap:1.6rem;
+    padding:0 0 2.8rem 60px;
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity 0.7s ease, transform 0.7s ease;
+  }
+  .t-item.show{opacity:1;transform:translateY(0);}
+  .t-marker{
+    position:absolute;left:0;top:0.1rem;
+    width:56px;height:56px;
+    flex-shrink:0;
+  }
+  .t-marker svg{width:100%;height:100%;}
+  .t-year{
+    font-family:'JetBrains Mono',monospace;
+    color:var(--marigold);
+    font-size:1rem;
+    letter-spacing:0.06em;
+    margin-bottom:0.25rem;
+    display:block;
+  }
+  .t-card{
+    background:var(--night);
+    border:1px solid rgba(241,234,217,0.07);
+    border-radius:8px;
+    padding:1.2rem 1.4rem;
+    width:100%;
+  }
+  .t-card h3{font-family:'Mukta',sans-serif;font-weight:600;font-size:1.1rem;color:var(--khadi);margin-bottom:0.4rem;}
+  .t-card p{font-size:0.92rem;color:var(--khadi-dim);}
+
+  @media (min-width:781px){
+    .t-item{ padding-left:0; width:50%; }
+    .t-item:nth-child(odd){ padding-right:3.2rem; }
+    .t-item:nth-child(even){ margin-left:50%; padding-left:3.2rem; }
+    .t-item:nth-child(odd) .t-marker{ right:-28px; left:auto; }
+    .t-item:nth-child(even) .t-marker{ left:-28px; }
+    .timeline{ display:flex; flex-wrap:wrap; }
+  }
+
+  /* FIGHTERS GRID */
+  .fighters-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:1.4rem;
+  }
+  .fighter-card{
+    background:var(--night);
+    border:1px solid rgba(241,234,217,0.07);
+    border-top:3px solid var(--maroon);
+    border-radius:4px 4px 8px 8px;
+    padding:1.6rem 1.5rem;
+    transition:transform 0.3s ease, border-color 0.3s ease;
+  }
+  .fighter-card:hover{ transform:translateY(-4px); border-top-color:var(--marigold); }
+  .fighter-card .years{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.75rem;
+    color:var(--marigold);
+    letter-spacing:0.05em;
+    display:block;
+    margin-bottom:0.5rem;
+  }
+  .fighter-card h3{font-family:'Mukta',sans-serif;font-weight:600;font-size:1.25rem;margin-bottom:0.6rem;color:var(--khadi);}
+  .fighter-card p{font-size:0.92rem;color:var(--khadi-dim);}
+
+  /* TRIBUTE / QUOTES */
+  .tribute{background:var(--night-2);}
+  .quotes-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:1.6rem;
+  }
+  .quote-card{padding:1.4rem 0;border-top:1px solid rgba(241,234,217,0.12);}
+  .quote-card p.q{
+    font-family:'Yatra One',cursive;
+    font-size:1.2rem;
+    color:var(--khadi);
+    margin-bottom:0.7rem;
+    line-height:1.5;
+  }
+  .quote-card p.q::before{content:"\201C";color:var(--marigold);}
+  .quote-card p.q::after{content:"\201D";color:var(--marigold);}
+  .quote-card span{font-size:0.85rem;color:var(--khadi-dim);font-family:'JetBrains Mono',monospace;letter-spacing:0.03em;}
+
+  /* FOOTER */
+  footer.site-footer{
+    text-align:center;
+    padding:3.5rem 1.5rem 2.5rem;
+  }
+  footer.site-footer h3{font-size:1.6rem;margin-bottom:0.6rem;}
+  footer.site-footer p{color:var(--khadi-dim);font-size:0.9rem;max-width:520px;margin:0 auto;}
+  footer.site-footer .fine{
+    margin-top:2rem;font-family:'JetBrains Mono',monospace;font-size:0.72rem;
+    color:var(--khadi-dim);opacity:0.6;letter-spacing:0.05em;
+  }
+
+  ::selection{background:var(--marigold);color:var(--midnight);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--marigold);outline-offset:3px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand" aria-hidden="false">
+    <svg viewBox="0 0 60 60" role="img" aria-label="Ashoka Chakra emblem">
+      <circle cx="30" cy="30" r="26" fill="none" stroke="#e8a33d" stroke-width="2"/>
+      <circle cx="30" cy="30" r="4" fill="#e8a33d"/>
+      <g stroke="#e8a33d" stroke-width="1.4">
+        <!-- 12 spokes for the small nav mark -->
+        <line x1="30" y1="4" x2="30" y2="56"/>
+        <line x1="4" y1="30" x2="56" y2="30"/>
+        <line x1="11.4" y1="11.4" x2="48.6" y2="48.6"/>
+        <line x1="48.6" y1="11.4" x2="11.4" y2="48.6"/>
+        <line x1="30" y1="4" x2="30" y2="56" transform="rotate(30 30 30)"/>
+        <line x1="4" y1="30" x2="56" y2="30" transform="rotate(30 30 30)"/>
+      </g>
+    </svg>
+    <span>स्वतंत्रता</span>
+  </div>
+  <ul>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#fighters">Freedom fighters</a></li>
+    <li><a href="#tribute">Tribute</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="chakra-wrap">
+    <svg viewBox="0 0 200 200" role="img" aria-label="The Ashoka Chakra, wheel of time">
+      <circle cx="100" cy="100" r="90" fill="none" stroke="#e8a33d" stroke-width="3"/>
+      <circle cx="100" cy="100" r="10" fill="#e8a33d"/>
+      <g stroke="#e8a33d" stroke-width="2">
+        <line x1="100" y1="12" x2="100" y2="188" transform="rotate(0 100 100)"/>
+        <line x1="100" y1="12" x2="100" y2="188" transform="rotate(15 100 100)"/>
+        <line x1="100" y1="12" x2="100" y2="188" transform="rotate(30 100 100)"/>
+        <line x1="100" y1="12" x2="100" y2="188" transform="rotate(45 100 100)"/>
+        <line x1="100" y1="12" x2="100" y2="188" transform="rotate(60 100 100)"/>
+        <line x1="100" y1="12" x2="100" y2="188" transform="rotate(75 100 100)"/>
+        <line x1="100" y1="12" x2="100" y2="188" transform="rotate(90 100 100)"/>
+        <line x1="100" y1="12" x2="100" y2="188" transform="rotate(105 100 100)"/>
+      </g>
+    </svg>
+  </div>
+  <p class="eyebrow">15 August · 1947–2026</p>
+  <h1>Seventy-nine years since<br>the midnight <span>we woke free</span></h1>
+  <p class="lede">
+    A page to sit with the years, the marches, and the names behind them —
+    the people who gave their tomorrows so a country could have this one.
+  </p>
+  <div class="date-badge">The tryst is kept · Jai Hind</div>
+  <div class="thread hero-thread"></div>
+</header>
+
+<section class="speech-section">
+  <div class="section-inner">
+    <blockquote class="speech">
+      <p class="eyebrow">Midnight, 15 August 1947</p>
+      <p>Long years ago we made a tryst with destiny, and now the time comes when we shall redeem our pledge — not wholly, but very substantially.</p>
+      <footer>— Paraphrased from Jawaharlal Nehru's address to the Constituent Assembly</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section id="timeline">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow">The road to freedom</p>
+      <h2>Ninety years, one direction</h2>
+      <p>From the first uprising to the last viceroy's departure — the movement's turning points.</p>
+    </div>
+
+    <div class="timeline" id="timeline-list">
+      <div class="timeline-spine" aria-hidden="true"></div>
+
+      <div class="t-item">
+        <div class="t-marker">
+          <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="24" fill="none" stroke="#e8a33d" stroke-width="2"/><circle cx="28" cy="28" r="4" fill="#e8a33d"/><g stroke="#e8a33d" stroke-width="1.2"><line x1="28" y1="6" x2="28" y2="50"/><line x1="6" y1="28" x2="50" y2="28"/><line x1="12" y1="12" x2="44" y2="44"/><line x1="44" y1="12" x2="12" y2="44"/></g></svg>
+        </div>
+        <div>
+          <span class="t-year">1857</span>
+          <div class="t-card">
+            <h3>The first uprising</h3>
+            <p>Sepoys across northern India rose against the East India Company, beginning what many call the First War of Independence.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-marker">
+          <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="24" fill="none" stroke="#e8a33d" stroke-width="2"/><circle cx="28" cy="28" r="4" fill="#e8a33d"/><g stroke="#e8a33d" stroke-width="1.2"><line x1="28" y1="6" x2="28" y2="50"/><line x1="6" y1="28" x2="50" y2="28"/><line x1="12" y1="12" x2="44" y2="44"/><line x1="44" y1="12" x2="12" y2="44"/></g></svg>
+        </div>
+        <div>
+          <span class="t-year">1885</span>
+          <div class="t-card">
+            <h3>Indian National Congress founded</h3>
+            <p>A platform for organised political demands took shape, gradually turning scattered discontent into a national movement.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-marker">
+          <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="24" fill="none" stroke="#e8a33d" stroke-width="2"/><circle cx="28" cy="28" r="4" fill="#e8a33d"/><g stroke="#e8a33d" stroke-width="1.2"><line x1="28" y1="6" x2="28" y2="50"/><line x1="6" y1="28" x2="50" y2="28"/><line x1="12" y1="12" x2="44" y2="44"/><line x1="44" y1="12" x2="12" y2="44"/></g></svg>
+        </div>
+        <div>
+          <span class="t-year">1905</span>
+          <div class="t-card">
+            <h3>Partition of Bengal & the Swadeshi call</h3>
+            <p>An attempt to divide Bengal backfired, sparking the Swadeshi movement and a boycott of British-made goods in favour of homespun khadi.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-marker">
+          <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="24" fill="none" stroke="#e8a33d" stroke-width="2"/><circle cx="28" cy="28" r="4" fill="#e8a33d"/><g stroke="#e8a33d" stroke-width="1.2"><line x1="28" y1="6" x2="28" y2="50"/><line x1="6" y1="28" x2="50" y2="28"/><line x1="12" y1="12" x2="44" y2="44"/><line x1="44" y1="12" x2="12" y2="44"/></g></svg>
+        </div>
+        <div>
+          <span class="t-year">1919</span>
+          <div class="t-card">
+            <h3>Jallianwala Bagh</h3>
+            <p>Troops opened fire on an unarmed gathering in Amritsar, killing hundreds. The massacre turned widespread public opinion irreversibly against colonial rule.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-marker">
+          <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="24" fill="none" stroke="#e8a33d" stroke-width="2"/><circle cx="28" cy="28" r="4" fill="#e8a33d"/><g stroke="#e8a33d" stroke-width="1.2"><line x1="28" y1="6" x2="28" y2="50"/><line x1="6" y1="28" x2="50" y2="28"/><line x1="12" y1="12" x2="44" y2="44"/><line x1="44" y1="12" x2="12" y2="44"/></g></svg>
+        </div>
+        <div>
+          <span class="t-year">1920</span>
+          <div class="t-card">
+            <h3>Non-Cooperation Movement</h3>
+            <p>Gandhi called on Indians to withdraw from British institutions, schools, and titles — the first mass movement built on non-violence.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-marker">
+          <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="24" fill="none" stroke="#e8a33d" stroke-width="2"/><circle cx="28" cy="28" r="4" fill="#e8a33d"/><g stroke="#e8a33d" stroke-width="1.2"><line x1="28" y1="6" x2="28" y2="50"/><line x1="6" y1="28" x2="50" y2="28"/><line x1="12" y1="12" x2="44" y2="44"/><line x1="44" y1="12" x2="12" y2="44"/></g></svg>
+        </div>
+        <div>
+          <span class="t-year">1930</span>
+          <div class="t-card">
+            <h3>The Salt March</h3>
+            <p>Gandhi walked 240 miles to the sea at Dandi to make salt by hand, defying a British tax and igniting nationwide civil disobedience.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-marker">
+          <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="24" fill="none" stroke="#e8a33d" stroke-width="2"/><circle cx="28" cy="28" r="4" fill="#e8a33d"/><g stroke="#e8a33d" stroke-width="1.2"><line x1="28" y1="6" x2="28" y2="50"/><line x1="6" y1="28" x2="50" y2="28"/><line x1="12" y1="12" x2="44" y2="44"/><line x1="44" y1="12" x2="12" y2="44"/></g></svg>
+        </div>
+        <div>
+          <span class="t-year">1942</span>
+          <div class="t-card">
+            <h3>Quit India Movement</h3>
+            <p>With "Do or Die" as its call, the Congress demanded an immediate end to British rule, triggering the largest crackdown of the freedom struggle.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-marker">
+          <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="24" fill="none" stroke="#e8a33d" stroke-width="2"/><circle cx="28" cy="28" r="6" fill="#e8a33d"/><g stroke="#e8a33d" stroke-width="1.6"><line x1="28" y1="4" x2="28" y2="52"/><line x1="4" y1="28" x2="52" y2="28"/><line x1="10" y1="10" x2="46" y2="46"/><line x1="46" y1="10" x2="10" y2="46"/></g></svg>
+        </div>
+        <div>
+          <span class="t-year">1947</span>
+          <div class="t-card">
+            <h3>Independence, at midnight</h3>
+            <p>On 15 August, India woke as a free nation. The tricolour was raised over the Red Fort, and a hundred years of struggle found its answer.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="fighters">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow">Names worth keeping</p>
+      <h2>Remembering the brave</h2>
+      <p>The movement had thousands of hands. These are a few of the names history asks us not to forget.</p>
+    </div>
+
+    <div class="fighters-grid">
+      <article class="fighter-card">
+        <span class="years">1869 – 1948</span>
+        <h3>Mahatma Gandhi</h3>
+        <p>Led the movement through non-violent resistance — the Salt March and Quit India among the campaigns that broke colonial resolve without a single weapon raised.</p>
+      </article>
+
+      <article class="fighter-card">
+        <span class="years">1907 – 1931</span>
+        <h3>Bhagat Singh</h3>
+        <p>Revolutionary who chose the gallows over silence at twenty-three, turning his trial into a public case against imperial rule.</p>
+      </article>
+
+      <article class="fighter-card">
+        <span class="years">1828 – 1858</span>
+        <h3>Rani Lakshmibai</h3>
+        <p>The Queen of Jhansi rode into battle against the Company's forces, becoming an enduring symbol of the 1857 uprising's defiance.</p>
+      </article>
+
+      <article class="fighter-card">
+        <span class="years">1897 – 1945</span>
+        <h3>Subhas Chandra Bose</h3>
+        <p>Raised the Indian National Army abroad, believing the British could be forced out by strength as well as by persuasion.</p>
+      </article>
+
+      <article class="fighter-card">
+        <span class="years">1906 – 1931</span>
+        <h3>Chandrashekhar Azad</h3>
+        <p>Vowed he would never be taken alive, and kept that vow at Alfred Park, Allahabad — a name synonymous with youthful revolt.</p>
+      </article>
+
+      <article class="fighter-card">
+        <span class="years">1879 – 1949</span>
+        <h3>Sarojini Naidu</h3>
+        <p>Poet and orator known as the Nightingale of India, and the first woman to preside over the Indian National Congress.</p>
+      </article>
+
+      <article class="fighter-card">
+        <span class="years">1827 – 1857</span>
+        <h3>Mangal Pandey</h3>
+        <p>A sepoy whose act of defiance at Barrackpore is widely remembered as the spark that lit the 1857 rebellion.</p>
+      </article>
+
+      <article class="fighter-card">
+        <span class="years">1872 – 1901</span>
+        <h3>Alluri Sitarama Raju</h3>
+        <p>Led tribal communities of the Eastern Ghats in armed resistance during the Rampa Rebellion, defying colonial forest laws.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="tribute" class="tribute">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow">In their own words</p>
+      <h2>What they left behind</h2>
+      <p>A few lines that outlived the people who spoke them.</p>
+    </div>
+
+    <div class="quotes-grid">
+      <div class="quote-card">
+        <p class="q">Freedom is not worth having if it does not include the freedom to make mistakes.</p>
+        <span>Mahatma Gandhi</span>
+      </div>
+      <div class="quote-card">
+        <p class="q">Give me blood, and I shall give you freedom.</p>
+        <span>Subhas Chandra Bose</span>
+      </div>
+      <div class="quote-card">
+        <p class="q">It takes a loud noise to make the deaf hear.</p>
+        <span>Bhagat Singh</span>
+      </div>
+      <div class="quote-card">
+        <p class="q">Freedom is our birthright, and I shall have it.</p>
+        <span>Bal Gangadhar Tilak</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="thread"></div>
+
+<footer class="site-footer">
+  <h3>जय हिन्द</h3>
+  <p>Every flag raised on this day rests on names we know, and thousands more we never learned. Remember them today, not just on the fifteenth.</p>
+  <p class="fine">Made in memory of the freedom struggle · Independence Day, 15 August</p>
+</footer>
+
+<script>
+  (function(){
+    var items = document.querySelectorAll('.t-item');
+    if(!('IntersectionObserver' in window)){
+      items.forEach(function(el){ el.classList.add('show'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    items.forEach(function(el){ io.observe(el); });
+  })();
+</script>
+
+</body>
+</html>
